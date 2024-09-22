@@ -1,9 +1,12 @@
-import React from "react";
-import CssBaseline from "@mui/material/CssBaseline";
-import Box from "@mui/material/Box";
-import Container from "@mui/material/Container";
-const PageContainer = ({ children }) => {
-    return <Container maxWidth="lg">{children}</Container>;
-};
+import React from 'react';
+import CssBaseline from '@mui/material/CssBaseline';
+import Box from '@mui/material/Box';
+import Container from '@mui/material/Container';
 
-export default PageContainer;
+const PageContainer = ({children}) => {
+  return (
+    <Container>{children}</Container>
+  )
+}
+
+export default PageContainer

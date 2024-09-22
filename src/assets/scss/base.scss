@@ -1,0 +1,20 @@
+.active {
+  background-color: black;
+  .header {
+    .logo-image{
+        h1{
+            color: #ffffff;
+        }
+    }
+    .user-area {
+      .search-button {
+        border-bottom: 1px solid #ffffff;
+      }
+      .icons {
+        .icon {
+          color: #ffffff;
+        }
+      }
+    }
+  }
+}

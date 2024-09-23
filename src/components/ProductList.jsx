@@ -11,7 +11,7 @@ const ProductList = () => {
     dispatch(getAllProducts());
   }, []);
   return (
-    <div>
+    <div className="cartList">
       {product.map((item) => (
         <Product data={item} key={item.id}/>
       ))}

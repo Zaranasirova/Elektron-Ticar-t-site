@@ -9,7 +9,7 @@ const initialState = {
 
 export const getAllProducts = createAsyncThunk("getAllProducts", async () => {
   const res = await axios.get("https://fakestoreapi.com/products");
-  return res.data
+  return res.data;
 });
 
 export const productSlice = createSlice({

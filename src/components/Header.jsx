@@ -25,7 +25,7 @@ const Header = () => {
         <h1>Z.E</h1>
       </div>
       <div className="user-area">
-        <input type="text" className="search-button" placeholder="axtar:" />
+        <input type="text" className="search-button" placeholder="search:" />
         <div className="icons">
           <IoMdBasket className="icon" />
           {mode ? (

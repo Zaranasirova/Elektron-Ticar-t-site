@@ -8,9 +8,14 @@ const Product = ({ data }) => {
       <div className="image">
         <img src={image} alt="Products-image" />
       </div>
-      <div className="cart-details">
-        <p>{title}</p>
-        <h4>{price}</h4>
+      <div className="cart-container">
+        <div className="cart-details">
+          <p>{title}</p>
+          <h4>{price}₼</h4>
+        </div>
+        <div className="details-btn">
+          <button>Detallar</button>
+        </div>
       </div>
     </div>
   );

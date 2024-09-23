@@ -1,32 +1,68 @@
-
-.cartList{
+.cartList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 25px;
+  justify-content: center;
+  .cart {
+    width: 250px;
+    height: 420px;
+    box-shadow: 1px 3px 4px lightgray;
+    border-radius: 10px;
+    padding: 10px;
     display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
-    margin-top: 25px;
-    justify-content: center;
-    .cart{
-        width: 250px;
-        height: 420px;
-        box-shadow: 1px 3px 4px lightgray;
-        border-radius: 10px;
-        padding: 10px;
-        .image{
-            width: 100%;
-            height: 250px;
-            img{
-                width: 100%;
-                height: 100%;
-                
-            }
-        }
-        .cart-details{
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            p{
-                height: 55px;
-            }
-        }
+    align-items: center;
+    flex-direction: column;
+    &:hover {
+      box-shadow: 1px 4px 6px rgb(105, 105, 105);
+      transition: all 0.3s;
+      cursor: pointer;
     }
+    .image {
+      width: 100%;
+      height: 100%;
+
+      img {
+        width: 100%;
+        height: 250px;
+      }
+    }
+    .cart-container {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      align-items: center;
+      height: 100%;
+      justify-content: space-between;
+      .cart-details {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        p {
+          margin: 0;
+          padding: 0;
+          height: 80px;
+        }
+        h4 {
+          margin: 0;
+          padding: 0;
+        }
+      }
+      .details-btn {
+        button {
+          border: none;
+          padding: 10px 25px;
+          border-radius: 28px;
+          background-color: rgb(145, 142, 142);
+          color: #fff;
+          font-size: 17px;
+          &:hover {
+            cursor: pointer;
+            background-color: rgb(170, 108, 27);
+            transition: all 0.5s;
+          }
+        }
+      }
+    }
+  }
 }

@@ -1,10 +1,10 @@
 .active {
   background-color: black;
   .header {
-    .logo-image{
-        h1{
-            color: #ffffff;
-        }
+    .logo-image {
+      h1 {
+        color: #ffffff;
+      }
     }
     .user-area {
       .search-button {
@@ -13,6 +13,19 @@
       .icons {
         .icon {
           color: #ffffff;
+        }
+      }
+    }
+  }
+  .cartList {
+    .cart {
+      box-shadow: 1px 3px 4px lightgray;
+      color: #000;
+      background-color: #ffffff;
+      .image {
+        border-bottom: 1px solid lightgray;
+        padding-bottom: 5px;
+        img {
         }
       }
     }

@@ -5,7 +5,7 @@ import ProductList from "./components/ProductList";
 import { Routes, Route } from "react-router-dom";
 import HomePage from "./pages/HomePage";
 import Loading from "./assets/scss/components/Loading";
-
+import ProductDetails from "./components/ProductDetails";
 
 
 const App = () => {
@@ -16,6 +16,7 @@ const App = () => {
       <Loading/>
       <Routes>
         <Route path="/" element={<HomePage />} />
+        <Route path="/product-details/:id" element={<ProductDetails />} />
       </Routes>
     </PageContainer>
   );

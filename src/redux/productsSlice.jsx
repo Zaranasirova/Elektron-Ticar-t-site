@@ -4,7 +4,9 @@ import axios from "axios";
 
 const initialState = {
   product: [],
+  singleProducts: {},
   loading: false,
+ 
 };
 
 export const getAllProducts = createAsyncThunk("getAllProducts", async () => {
@@ -15,7 +17,11 @@ export const getAllProducts = createAsyncThunk("getAllProducts", async () => {
 export const productSlice = createSlice({
   name: "products",
   initialState,
-  reducers: {},
+  reducers: {
+    singleProducts: (state, action) => {
+      state.singleProducts = action.payload
+    }
+  },
   extraReducers: (builder) => {
     builder.addCase(getAllProducts.pending, (state) => {
       state.loading = true;
@@ -27,6 +33,6 @@ export const productSlice = createSlice({
   },
 });
 
-export const {} = productSlice.actions;
+export const { singleProducts } = productSlice.actions;
 
 export default productSlice.reducer;

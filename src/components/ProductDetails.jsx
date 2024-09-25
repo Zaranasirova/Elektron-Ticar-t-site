@@ -28,9 +28,11 @@ const ProductDetails = () => {
     <div className="details-right-side">
       <h1>{title}</h1>
       <p>{description}</p>
-      <h3>{price}</h3>
-      <div>
-        <span>0</span>
+      <span className="price">{price}</span>
+      <div className="counter-wrapper">
+        <span className="counter">-</span>
+        <span className="counter-price">0</span>
+        <span className="counter">+</span>
       </div>
 
     </div>

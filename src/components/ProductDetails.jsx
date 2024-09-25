@@ -8,6 +8,7 @@ const ProductDetails = () => {
   const { product } = useSelector((state) => state.products);
   const singleProductState = useSelector((state) => state.products.singleProducts)
   const dispatch = useDispatch()
+  const { title, image, category, description, price } = singleProductState;
   useEffect(() => {
     getProductById()
   }, [])
@@ -19,7 +20,21 @@ const ProductDetails = () => {
       }
     })
   }
-  return <div>name:{singleProductState.title}</div>;
+  return <div className="product-details">
+
+    <div className="details-left-side">
+      <img src={image} alt="Productimage" />
+    </div>
+    <div className="details-right-side">
+      <h1>{title}</h1>
+      <p>{description}</p>
+      <h3>{price}</h3>
+      <div>
+        <span>0</span>
+      </div>
+
+    </div>
+  </div>;
 };
 
 export default ProductDetails;

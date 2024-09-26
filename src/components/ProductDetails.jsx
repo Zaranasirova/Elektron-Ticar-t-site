@@ -2,6 +2,9 @@ import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import { singleProducts } from "../redux/productsSlice";
+import { increment } from "../redux/productsSlice";
+import { decrement } from "../redux/productsSlice";
+
 
 const ProductDetails = () => {
   const { id } = useParams();
@@ -20,6 +23,11 @@ const ProductDetails = () => {
       }
     })
   }
+
+  const counter = useSelector((state) => state.products.counter);
+
+
+
   return <div className="product-details">
 
     <div className="details-left-side">
@@ -30,9 +38,9 @@ const ProductDetails = () => {
       <p>{description}</p>
       <span className="price">{price}</span>
       <div className="counter-wrapper">
-        <span className="counter">-</span>
-        <span className="counter-price">0</span>
-        <span className="counter">+</span>
+        <span className="counter" onClick={()=>dispatch(decrement())}>-</span>
+        <span className="counter-price">{counter}</span>
+        <span className="counter" onClick={()=>dispatch(increment())}>+</span>
       </div>
 
     </div>

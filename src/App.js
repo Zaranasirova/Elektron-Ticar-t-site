@@ -4,9 +4,8 @@ import Header from "./components/Header";
 import ProductList from "./components/ProductList";
 import { Routes, Route } from "react-router-dom";
 import HomePage from "./pages/HomePage";
-import Loading from "./assets/scss/components/Loading";
 import ProductDetails from "./components/ProductDetails";
-
+import Loading from "./components/Loading";
 
 const App = () => {
   return (

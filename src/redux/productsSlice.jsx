@@ -6,7 +6,7 @@ const initialState = {
   product: [],
   singleProducts: {},
   loading: false,
-  counter: 0,
+  counter: 1,
 
 };
 

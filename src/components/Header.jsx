@@ -3,6 +3,7 @@ import logo from "../assets/icons/logo.svg";
 import { IoMdBasket } from "react-icons/io";
 import { MdLightMode } from "react-icons/md";
 import { IoMoon } from "react-icons/io5";
+import { useNavigate } from "react-router-dom";
 const Header = () => {
   const [mode, setMode] = useState(true);
   const handleModeChange = () => {
@@ -19,10 +20,12 @@ const Header = () => {
     }
   };
 
+
+  const naviqate=useNavigate()
   return (
     <header className="header">
       <div className="logo-image">
-        <h1>Z.E</h1>
+        <h1 onClick={()=>naviqate("/")} style={{cursor:"pointer"}}>Z.E</h1>
       </div>
       <div className="user-area">
         <input type="text" className="search-button" placeholder="search:" />
